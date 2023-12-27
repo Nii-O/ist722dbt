@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fact_event_ticket_sales
+    description: Periodic snapshot fact table. One row per event per day
+    columns:
+      - name: eventkey
+        description: Degenerate dimension for the event.
+        tests:
+            - unique
+            - not_null
+      - name: venuekey
+        description: Degenerate dimension for the venue.
+        tests:
+            - unique
+            - not_null
+      - name: numofticketssold
+        description: Number of tickets that were sold for an event

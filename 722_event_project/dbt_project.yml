@@ -2,11 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-<<<<<<< HEAD
-name: 'my_new_project'
-=======
-name: 'IST_722_event_project'
->>>>>>> 9d2d0ca65ec20649a9dcc7f4919438d260861ae8
+name: '722_event_project'
 version: '1.0.0'
 config-version: 2
 
@@ -40,14 +36,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-<<<<<<< HEAD
-  my_new_project:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
-=======
   project_event_management:
     +materialized: table    
     database: analytics    
     +schema: myevent_v1
->>>>>>> 9d2d0ca65ec20649a9dcc7f4919438d260861ae8
