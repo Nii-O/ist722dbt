@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: dim_requests
+    columns:
+      - name: requestkey
+        description: "Surrogate key"
+        tests:
+          - unique
+          - not_null
+
+      - name: requestid
+        description: "Primary key of source table"
+        data_type: int
+        tests:
+          - unique
+          - not_null
+
+      - name: requesteventname
+        description: "Proposed event name"
+        data_type: varchar
+        tests:
+          - not_null
+
+      - name: requestdate
+        description: "Date request was made"
+        data_type: varchar
+        tests:
+          - not_null
+
+      - name: requestdays
+        description: "Requested event duration"
+        data_type: int
+        tests:
+          - not_null
+
+      - name: requestattendance
+        description: "Estimated attendance to event"
+        data_type: int
+        tests:
+          - not_null
+
+      - name: requesteventtype
+        description: "Type of event"
+        data_type: varchar
+        tests:
+          - not_null
+
+      - name: requestdescription
+        description: "Request event description"
+        data_type: varchar
+
+      - name: requeststatus
+        description: "Request status"
+        data_type: varchar
+        tests:
+          - not_null
+
+      - name: requestmadebyid
+        description: "Request made by"
+        data_type: int
+        tests:
+          - not_null
+
+      - name: requestsubmittedtoid
+        description: "Request submitted to"
+        data_type: int
+        tests:
+          - not_null
+
+      - name: requestvenueid
+        description: "Request event venue"
+        data_type: int
+        tests:
+          - not_null

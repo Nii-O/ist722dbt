@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dim_review
+    columns:
+      - name: reviewkey
+        description: "Surrogate key"
+        data_type: int
+        tests:
+          - unique
+          - not_null
+
+      - name: reviewid
+        description: "Primary key of source table"
+        data_type: int
+        tests:
+          - unique
+          - not_null
+
+      - name: reviewtext
+        description: "Review text description"
+        data_type: varchar
+        tests:
+          - not_null
+
+      - name: reviewdate
+        description: "Review made by date"
+        data_type: varchar
+        tests:
+          - not_null
+
+      - name: reviewrating
+        description: "Review rating"
+        data_type: int
+        tests:
+          - not_null
+
+      - name: revieweventid
+        description: "ID of event review was made for"
+        data_type: int
+        tests:
+          - not_null
+
+      - name: reviewpersonid
+        description: "ID of person who wrote review"
+        data_type: int
+        tests:
+          - not_null

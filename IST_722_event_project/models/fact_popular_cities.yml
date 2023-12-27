@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fact_popular_cities
+    columns:
+      - name: citykey
+        description: "Source key used for drillthrough"
+        tests:
+          - unique
+          - not_null
+
+      - name: eventkey
+        description: "Dimension foreign key for dim_event"
+
+      - name: venuekey
+        description: "Dimension foreign key for dim_venue"
+
+      - name: ratingkey
+        description: "Dimension foreign key for dim_rating"
+
+      - name: numofticketssold
+        description: "Number of tickets sold"
+
+      - name: avgrating
+        description: "Average rating of the events"

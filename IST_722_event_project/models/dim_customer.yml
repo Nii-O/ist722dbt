@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: Customer Dimension. One row per customer
+    columns:
+      - name: customerkey
+        description: The surrogate key of the customer
+        tests:
+          - not_null
+          - unique
+      - name: customerid
+        description: The business / source key of the customer
+        tests:
+          - not_null
+          - unique
+      - name: customername
+        description: The name of the customer
+        tests:
+          - not_null
+      - name: customeremail
+        description: The email of the customer
+        tests:
+          - not_null
+          - unique
+      - name: customerphoneno
+        description: The phone number of the customer
+        tests:
+          - not_null
+          - unique
+      - name: customeraddress
+        description: The address of the customer

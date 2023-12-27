@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fact_request_approval
+    columns:
+
+      - name: venuekey
+        description: "Dimension foreign key for dim_venue"
+        data_type: int
+
+      - name: numofapprovedrequests
+        description: "The number of approved requests"
+        data_type: int
