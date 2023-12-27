@@ -8,4 +8,4 @@ select
     person_email as customeremail,
     person_phone_no as customerphoneno,
     person_street_address as customeraddress
-from stg_customers
+from stg_customers 
