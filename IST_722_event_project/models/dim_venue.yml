@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_venue
+    columns:
+      - name: venuekey
+        description: "Surrogate key"
+        tests:
+          - unique
+          - not_null
+
+      - name: venueid
+        description: "Primary key of the source system (business key)"
+        tests:
+          - unique
+          - not_null
+
+      - name: venuename
+        description: "Name of the venue"
+        tests:
+          - not_null
+
+      - name: venuecapacity
+        description: "Capacity of the venue"
+        tests:
+          - not_null
+
+      - name: venueaddress
+        description: "Address of the venue"
+        tests:
+          - not_null
